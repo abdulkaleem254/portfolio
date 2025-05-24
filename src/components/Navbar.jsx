@@ -21,7 +21,7 @@ const Navbar = () => {
         setActive(newActive);
     }
     return (
-        <nav className="bg-gray-950 fixed w-full top-0 left-0 z-1 transition-all duration-300">
+        <nav  className="bg-gray-950 fixed w-full top-0 left-0 z-1 transition-all duration-300">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden" onClick={() => setToggle(!toggle)}>
@@ -45,7 +45,7 @@ const Navbar = () => {
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex h-30 items-center justify-between space-x-4">
                                 {Object.keys(active).map(key => {
-                                    return <a key={key} href="#" className={active[key] ? 'block text-center rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block text-center rounded-md px-3 py-2 text-base font-medium text-white'} aria-current="page" onClick={() => { changeActive(key) }}>{key}</a>
+                                    return <a key={key} href={`#${key.toLowerCase()}`} className={active[key] ? 'block text-center rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white' : 'block text-center rounded-md px-3 py-2 text-base font-medium text-white'} aria-current="page" onClick={() => { changeActive(key) }}>{key}</a>
                                     console.log(key.toUpperCase());
 
 

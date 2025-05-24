@@ -25,7 +25,7 @@ const Banner = () => {
         <>
 
             <>
-                <div className="mt-15 flex flex-col md:flex-row-reverse items-center  relative banner bg-gray-950 text-white">
+                <div id="home" className="mt-15 flex flex-col md:flex-row-reverse items-center  relative banner bg-gray-950 text-white">
                     <div className="w-full md:w-[70%] p-4 md:px-10 flex justify-center items-center order-2 md:order-1">
                         <div className="container text-center md:text-start mt-5 md:mt-1 md:mt-0">
                             <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-gray-800/90 backdrop-blur-sm mb-6"><div class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></div><span class="text-xs font-medium gradient-text bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-400">Available for new projects</span></div>
@@ -59,7 +59,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
-                        <div className="home_img h-[350px] md:h-[500px] flex items-center justify-center">
+                        <div className="home_img h-[350px] md:h-[500px] flex items-center justify-center me-0  md:me-30">
                             <svg className="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <mask id="mask0" mask-type="alpha">
