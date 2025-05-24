@@ -13,10 +13,12 @@ function App() {
 
   const cursor = document.createElement("div");
   cursor.classList.add("cursor-dot");
+  const dot=document.createElement("div");
+  cursor.appendChild(dot);
   document.body.appendChild(cursor);
 
   document.addEventListener("mousemove", (e) => {
-    cursor.style.transform = `translate(${e.clientX - 8}px, ${e.clientY - 8}px)`;
+    cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
   });
 
 
