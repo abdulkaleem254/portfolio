@@ -5,6 +5,7 @@ import TypeWriterEffect from 'react-typewriter-effect';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import resume from "../assets/Kaleem_Frontend_Resume.pdf"
 const Banner = () => {
     function Typewriter({ text, speed = 100 }) {
         const [displayed, setDisplayed] = useState('');
@@ -81,14 +82,14 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="absolute right-2 md:right-4 top-70 md:top-40 flex flex-col gap-4 items-end">
-                        <a className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
+                        <a href="https://github.com/abdulkaleem254" target="_Blank" className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
                             <GitHubIcon className="mr-2 text-xl" />
                             <span className="mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 Github
                             </span>
                         </a>
 
-                        <a className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
+                        <a href="https://www.linkedin.com/in/kaleem254/" target="_blank" className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
                             <LinkedInIcon className="mr-2 text-xl" />
                             <span className="mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 LinkedIn

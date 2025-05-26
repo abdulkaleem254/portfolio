@@ -6,7 +6,7 @@ const Timeline = ({ timeline, title }) => {
             <div className="md:w-1/2 relative ml-4">
                 <div className="mb-5 flex items-center gap-3">
                     <WorkOutlineOutlinedIcon className='font-bold' />
-                    <h2 className="text-2xl">{title}</h2>
+                    <h2 className="text-2xl font-semibold">{title}</h2>
                 </div>
                 {/* Timeline vertical line */}
                 <div className="absolute left-0 top-13 bottom-0 w-1 bg-blue-600 rounded-full"></div>

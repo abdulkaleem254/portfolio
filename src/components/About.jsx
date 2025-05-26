@@ -1,5 +1,7 @@
 import profile from "../assets/profil.webp";
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import resume from "../assets/Kaleem_Frontend_Resume.pdf"
+
 
 const About = () => {
     return (
@@ -37,7 +39,7 @@ const About = () => {
                                     <span className="absolute -inset-1.5"></span>
                                     <span className="sr-only">Open user menu</span>
                                     <a
-                                        href="/path/to/your/resume.pdf"
+                                        href={resume}
                                         download
                                         className="text-white tracking-wide px-5 py-3 rounded  outline-none  flex items-center"
                                     >

@@ -32,7 +32,7 @@ const Experience = () => {
         
 
     return (
-        <section className="py-10 px-5 bg-gray-900 text-white">
+        <section className="py-10 pt-15 px-5 bg-gray-900 text-white bg-gray-800" id='experience'>
             <h2 className="text-3xl text-center font-bold text-gray-200 tracking-wide">Experience & Education</h2>
             <div className="w-20 border-blue-600 border-b-4 mx-auto mt-2 mb-10"></div>
 
