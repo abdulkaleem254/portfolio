@@ -73,14 +73,15 @@ const Skills = () => {
                 </div>
 
             </section>
-            <div className="flex w-[90%] mx-auto flex-wrap gap-5 justify-center items-center my-5">
+            <div className="flex  w-[90%] mx-auto flex-wrap gap-5 justify-center items-center my-5">
 
                 {skills.map((tech, index) => {
                     return (
                         <>
 
-                            <Skillbox tech={tech} />
+                            <Skillbox tech={tech}/>
 
+                        
 
                         </>
                     )
