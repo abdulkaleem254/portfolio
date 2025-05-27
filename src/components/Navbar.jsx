@@ -21,6 +21,7 @@ const Navbar = () => {
             newActive[key] = key == activekey;
         }
         setActive(newActive);
+        setToggle(!toggle);
     }
     return (
         <nav className="bg-gray-950 fixed w-full top-0 left-0 z-1 transition-all duration-300">
