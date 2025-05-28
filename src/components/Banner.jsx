@@ -29,7 +29,7 @@ const Banner = () => {
                 <div id="home" className="mt-15 flex flex-col md:flex-row-reverse items-center  relative banner bg-gray-950 text-white">
                     <div className="w-full md:w-[70%] p-4 md:px-10 flex justify-center items-center order-2 md:order-1">
                         <div className="container text-center md:text-start mt-5 md:mt-1 md:mt-0">
-                            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-gray-800/90 backdrop-blur-sm mb-6"><div class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></div><span class="text-xs font-medium gradient-text bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-400">Available for new projects</span></div>
+                            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-gray-800/90 backdrop-blur-sm mb-6"><div className="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></div><span className="text-xs font-medium gradient-text bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-400">Available for new projects</span></div>
                             <h1 className="text-4xl md:text-6xl font-bold">
                                 Hi, I'm <span className="block mt-2 text-blue-600 tracking-wider bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text text-transparent gradient-text">Shaik Kaleem</span>
                             </h1>

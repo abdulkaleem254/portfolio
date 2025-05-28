@@ -79,9 +79,9 @@ const Skills = () => {
                     return (
                         <>
 
-                            <Skillbox tech={tech}/>
+                            <Skillbox tech={tech} />
 
-                        
+
 
                         </>
                     )

@@ -11,10 +11,10 @@ const About = () => {
                 <div className="w-20 border-blue-600 border-b-3 mx-auto mt-1"></div>
                 <div className="container w-[90%] my-10 mx-auto block md:flex justify-around text-center">
                     <div className="w-[90%] mx-auto md:w-1/2 mb-5">
-                        <div class="relative aspect-square max-w-md" style={{ opacity: 1 }}>
-                            <div class="absolute inset-0 border-2 border-blue-600 translate-x-4 translate-y-4 rounded-lg"></div>
-                            <div class="relative h-full w-full overflow-hidden rounded-lg">
-                                <img alt="Shaik Kaleem" class="object-cover w-full h-full" src={profile} />
+                        <div className="relative aspect-square max-w-md" style={{ opacity: 1 }}>
+                            <div className="absolute inset-0 border-2 border-blue-600 translate-x-4 translate-y-4 rounded-lg"></div>
+                            <div className="relative h-full w-full overflow-hidden rounded-lg">
+                                <img alt="Shaik Kaleem" className="object-cover w-full h-full" src={profile} />
                             </div>
                         </div>
                     </div>

@@ -88,7 +88,7 @@ const Navbar = () => {
                         console.log(key.toUpperCase());
                     })}
 
-                    <div className="text-center px-3 py-2"> 
+                    <div className="text-center px-3 py-2">
                         <a href="#" className="rounded-md px-3 py-2 text-md font-medium cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm">Download Resume <FileDownloadOutlinedIcon className="ml-2" /></a>
                     </div>
                 </div>
