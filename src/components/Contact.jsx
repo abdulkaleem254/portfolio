@@ -24,6 +24,7 @@ const Contact = () => {
                 ...data,
                 createdAt: new Date()
             })
+
             // console.log("Document written with ID: ", docRef.id);
             alert("Your response has securely sent!");
             reset();

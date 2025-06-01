@@ -24,7 +24,7 @@ const Login = () => {
         }
         catch (err) {
             console.log(err.code, err.message)
-        }
+        }   
     }
 
     return (
