@@ -65,16 +65,15 @@ const Navbar = () => {
 
                         <div className="relative ml-3">
                             <div>
-                                <button type="button" className="relative flex rounded cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <button >
                                     <span className="absolute -inset-1.5"></span>
                                     <span className="sr-only">Open user menu</span>
-                                    <a
-                                        href={resume}
-                                        download
-                                        className="text-white px-3 py-2 rounded  outline-none  flex items-center"
+                                    <a type="button" className="relative font-semibold tracking-wide flex rounded px-3 py-2 cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true"
+                                        href={resume} target="_Blank"
                                     >
                                         Download Resume <FileDownloadOutlinedIcon className="ml-2" />
-                                    </a>                                </button>
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +88,7 @@ const Navbar = () => {
                     })}
 
                     <div className="text-center px-3 py-2">
-                        <a href="#" className="rounded-md px-3 py-2 text-md font-medium cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm">Download Resume <FileDownloadOutlinedIcon className="ml-2" /></a>
+                        <a href={resume} className="rounded-md px-3 py-2 text-md font-medium cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm">Download Resume <FileDownloadOutlinedIcon className="ml-2" /></a>
                     </div>
                 </div>
             </div>
