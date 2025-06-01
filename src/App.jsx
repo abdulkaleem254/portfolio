@@ -11,7 +11,7 @@ import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import ProtectedRoute from './components/protectedRoute'
+import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './store/AuthContext'
 
 function App() {
