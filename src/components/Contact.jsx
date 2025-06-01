@@ -19,15 +19,12 @@ const Contact = () => {
     }
     const saveUser = async (data) => {
         try {
-            const docRef = doc(db, 'users', 'allResponses');
-            await updateDoc(docRef, {
-                responses: arrayUnion({
-                    ...data,
-                    createdAt: new Date()
-                })
-            })
 
-            console.log("Document written with ID: ", docRef.id);
+            await addDoc(collection(db, "users"), {
+                ...data,
+                createdAt: new Date()
+            })
+            // console.log("Document written with ID: ", docRef.id);
             alert("Your response has securely sent!");
             reset();
         }

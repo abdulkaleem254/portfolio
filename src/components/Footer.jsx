@@ -2,6 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 import EmailIcon from '@mui/icons-material/Email';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <>
@@ -13,14 +14,14 @@ const Footer = () => {
 
                     </div>
                     <div className='flex gap-3 mt-5'>
-                        <a href=""> <GitHubIcon/> </a>
-                        <a href=""> <LinkedInIcon/> </a>
-                        <a href="">  <XIcon/> </a>
-                        <a href=""><EmailIcon/></a>
+                        <a href=""> <GitHubIcon /> </a>
+                        <a href=""> <LinkedInIcon /> </a>
+                        <a href="">  <XIcon /> </a>
+                        <a href=""><EmailIcon /></a>
                     </div>
                 </div>
                 <div className="container text-center py-5 md:py-1">
-                    <p>© 2025 Shaik Kaleem. All Rights Reserved.</p>
+                    <p>© 2025 <Link to="dashboard">Shaik Kaleem</Link>. All Rights Reserved.</p>
                 </div>
             </section>
         </>
