@@ -35,13 +35,11 @@ const About = () => {
                             </div>
                             <div className="border hidden md:block border-gray-100 border-r-2 h-13"></div>
                             <div className="mt-2 text-center">
-                                <button type="button" className="relative flex rounded cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm mx-auto" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <span className="absolute -inset-1.5"></span>
-                                    <span className="sr-only">Open user menu</span>
-                                    <a
+                                <button >
+                                    <a type="button" className="relative px-3 py-3 font-semibold tracking-wide flex rounded cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm mx-auto" id="user-menu-button" aria-expanded="false" aria-haspopup="true"
                                         href={resume}
                                         download
-                                        className="text-white tracking-wide px-5 py-3 rounded  outline-none  flex items-center"
+                                        
                                     >
                                         <FileDownloadOutlinedIcon className="ml-2" />Download Resume
                                     </a>

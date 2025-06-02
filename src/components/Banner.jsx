@@ -52,10 +52,10 @@ const Banner = () => {
                                 I create outstanding and accessible digital experiences for the web, specializing in building modern full-stack applications with the MERN stack—MongoDB, Express.js, React, and Node.js. My expertise also includes crafting responsive designs using Tailwind CSS and JavaScript.
                             </p>
                             <div className="flex items-center justify-center md:justify-start">
-                                <a href="#" className="flex items-center tracking-wider bg-blue-800 hover:bg-blue-900 rounded px-5 py-2 me-8">
+                                <a href="#projects" className="flex items-center tracking-wider bg-blue-800 hover:bg-blue-900 rounded px-5 py-2 me-8">
                                     View My Work <span className="ml-2">→</span>
                                 </a>
-                                <a href="#" className="border py-2 px-8 tracking-widest hover:bg-gray-900">Contact</a>
+                                <a href="#contact" className="border py-2 px-8 tracking-widest hover:bg-gray-900">Contact</a>
                             </div>
                         </div>
                     </div>

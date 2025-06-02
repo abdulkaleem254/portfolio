@@ -3,6 +3,7 @@ import { auth, db } from "../firebase/firebaseConfig";
 import { Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { collection, getDoc, getDocs } from "firebase/firestore";
+import logo from "../assets/logo.png"
 
 const Dashboard = () => {
     const [data, setData] = useState();
@@ -39,22 +40,24 @@ const Dashboard = () => {
     }, [])
     return (
         <>
-            <div className="flex justify-between my-1">
-                <h1>This is dashboard page</h1>
-                <div>
-                    <button className="bg-red-700 px-2 py-1 radius" onClick={handleLogOut}>Logout</button>
+            <div className="px-2 fixed flex justify-between w-full align-center bg-gray-950">
+                <h1><img src={logo} alt="logo" className="w-full h-20" /></h1>
+                <div className="flex items-center">
+                    <button className="bg-red-700 px-2 py-1 rounded" onClick={handleLogOut}>Logout</button>
                 </div>
             </div>
 
-            <div className="px-10 mx-auto border">
-                <h2>Contact Form Submissions</h2>
+            <div className="px-10 mx-auto pt-25">
+                <h2 className="font-semibold text-xl">Contact Form Submissions</h2>
                 <ul>
                     {data && data.map((msg) => (
-                        <li key={msg.id} className="my-2">
-                            <strong>{msg.name}</strong> ({msg.email})<br />
-                            <em>{msg.subject}</em><br />
-                            {msg.message}
-                            <hr />
+                        <li key={msg.id} className="my-2 py-1">
+                            <strong>Name: </strong>{msg.name}<br />
+                            <strong>Email : </strong>{msg.Email} <br />
+                            <em><strong>Subject : </strong>{msg.subject}</em><br />
+                            <strong >Message : </strong>{msg.message}
+
+                            <hr className="mt-2" />
                         </li>
                     ))}
                 </ul>

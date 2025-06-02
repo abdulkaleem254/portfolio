@@ -7,13 +7,13 @@ const Footer = () => {
     return (
         <>
             <section id="footer mt-20 bg-gray-950">
-                <div className="container px-10 py-10 md:flex justify-between items-center">
-                    <div className="md:w-1/2">
+                <div className="container p-3 pt-10 md:p-10 md:flex justify-between items-center">
+                    <div className="md:w-1/2 text-center">
                         <h2 className="font-bold text-xl">Portfolio</h2>
                         <p>A passionate Full Stack Web Developer building modern and responsive web applications with React, Tailwind CSS, and JavaScript.</p>
 
                     </div>
-                    <div className='flex gap-3 mt-5'>
+                    <div className='flex gap-3 mt-5 justify-center md:justify-start'>
                         <a href=""> <GitHubIcon /> </a>
                         <a href=""> <LinkedInIcon /> </a>
                         <a href="">  <XIcon /> </a>

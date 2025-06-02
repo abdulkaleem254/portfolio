@@ -38,10 +38,10 @@ const Contact = () => {
             <section className="py-10 pt-15 px-5 bg-gray-900 text-white bg-gray-800" id='contact'>
                 <h2 className="text-3xl text-center font-bold text-gray-200 tracking-wide">Get in Touch</h2>
                 <div className="w-20 border-blue-600 border-b-4 mx-auto mt-2"></div>
-                <p className="text-gray-500 text-sm w-[60%] mx-auto text-center my-5">Feel free to contact me for any work or suggestions. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                <p className="text-gray-500 text-sm md:w-[60%] mx-auto text-center my-5">Feel free to contact me for any work or suggestions. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
                 <div className="grid lg:grid-cols-3 gap-8 mt-10">
                     <div className="lg:col-span-1" style={{ opacity: 1 }}>
-                        <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full">
+                        <div className="bg-white dark:bg-gray-900 p-2 md:p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full">
                             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
                                 Contact Information
                             </h3>
@@ -137,7 +137,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <form name="contact" className="lg:col-span-2 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
+                    <form name="contact" className="lg:col-span-2 bg-white dark:bg-gray-900 p-2 md:p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
                         style={{ opacity: 1 }} onSubmit={handleSubmit(onSubmit)}>
                         <input type="hidden" value="contact" name="form-name" />
                         <div className="grid md:grid-cols-2 gap-6 mb-6">

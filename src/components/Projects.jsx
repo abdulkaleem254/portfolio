@@ -9,7 +9,7 @@ import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 const Projects = () => {
 
     // const SHEETDB_API = "https://sheetdb.io/api/v1/z0xuormsm9o6x"; 
-    
+
     // async function submitForm(formData) {
     //     console.log("called")
     //     const response=await fetch(SHEETDB_API, {
@@ -18,7 +18,7 @@ const Projects = () => {
     //         body: JSON.stringify({ data: formData })
     //     });
     //     console.log(response);
-        
+
     // }
 
     // // Example usage:
@@ -74,7 +74,7 @@ const Projects = () => {
             description: "Start typing your favourite dish, this app will show you all the varities with recipe description and youtube video if exists.",
             gitlink: "https://github.com/abdulkaleem254/portfolio",
             liveUrl: "https://food-recipe-making.netlify.app/",
-            technologies: ["React.js", "Tailwind CSS", "REST Api","Material UI"],
+            technologies: ["React.js", "Tailwind CSS", "REST Api", "Material UI"],
             stack: "frontend"
         },
         {
@@ -121,7 +121,7 @@ const Projects = () => {
                                         <p className="my-1 text-gray-400">{project.description}</p>
 
                                         <div className="mt-5 mb-2 absolute bottom-0.5">
-                                            <div className="flex gap-3 text-sm mb-3 justify-start items-center">
+                                            <div className="flex gap-3 flex-wrap text-sm mb-3 justify-start items-center">
                                                 {project.technologies.map(tech =>
                                                     <p className="bg-blue-600 px-2 py-0.5 tracking-wide rounded text-xs">{tech}</p>
                                                 )}

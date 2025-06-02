@@ -65,7 +65,7 @@ const Navbar = () => {
 
                         <div className="relative ml-3">
                             <div>
-                                <button >
+                                <button>
                                     <span className="absolute -inset-1.5"></span>
                                     <span className="sr-only">Open user menu</span>
                                     <a type="button" className="relative font-semibold tracking-wide flex rounded px-3 py-2 cursor-pointer bg-blue-800 hover:bg-blue-900 text-sm" id="user-menu-button" aria-expanded="false" aria-haspopup="true"
