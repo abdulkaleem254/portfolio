@@ -1,101 +1,39 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import portfolio from "../assets/portfolio.png";
 import recipe from "../assets/food-recipe.png";
 import elegant from "../assets/elegant.png";
 import tuktuk from "../assets/tuk-tuk.png";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
+import { ProjectsContext } from "../store/ProjectsContext";
 
 const Projects = () => {
 
-    // const SHEETDB_API = "https://sheetdb.io/api/v1/z0xuormsm9o6x"; 
+    const [selection, setSelection] = useState("All");
+    const { projects } = useContext(ProjectsContext);
+    const [Projects, setProjects] = useState(projects)
 
-    // async function submitForm(formData) {
-    //     console.log("called")
-    //     const response=await fetch(SHEETDB_API, {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json" },
-    //         body: JSON.stringify({ data: formData })
-    //     });
-    //     console.log(response);
 
-    // }
+    const techStacks_btns = ["All", "Frontend", "Backend", "Fullstack"];
 
-    // // Example usage:
-    // const formData = { name: "Shaik", email: "shaikaleem@example.com", message: "Hello!" };
-    // submitForm(formData);
+    const handleSelect = (index) => {
+        const selected = techStacks_btns[index]
+        setSelection(selected);
+        // alert(selected)
+        if (selected !== "All") {
 
-    // async function getSheetData() {
-    //     try {
-    //         const response = await fetch(SHEETDB_API);
-    //         if (!response.ok) throw new Error("Network response was not ok");
-    //         const data = await response.json();
-    //         // 'data' is an array of objects, each representing a row
-    //         console.log(data);
-    //         // You can now use this data to update your UI
-    //         // Example: display in a table or list
-    //         displayData(data);
-    //     } catch (error) {
-    //         console.error("Error fetching data:", error);
-    //     }
-    // }
+            const filteredProjects = projects.filter(project => project.stack === selected.toLowerCase())
+            setProjects(filteredProjects);
 
-    // // Example function to display data in a table
-    // function displayData(data) {
-    //     const table = document.getElementById("sheet-data");
-    //     table.innerHTML = ""; // Clear previous data
-    //     data.forEach(row => {
-    //         const tr = document.createElement("tr");
-    //         for (const key in row) {
-    //             const td = document.createElement("td");
-    //             td.textContent = row[key];
-    //             tr.appendChild(td);
-    //         }
-    //         table.appendChild(tr);
-    //     });
-    // }
-
-    // // Call getSheetData after form submission or on page load
-    // getSheetData();
-
-    const projects = [
-        {
-            title: "Portfolio",
-            image: portfolio,
-            description: "A responsive portfolio website showcasing projects and skills with a modern design and smooth animations.",
-            gitlink: "https://github.com/abdulkaleem254/portfolio",
-            liveUrl: "https://portfolio-gules-eta-68.vercel.app/",
-            technologies: ["React.js", "Tailwind CSS", "Material UI"],
-            stack: "frontend"
-        },
-        {
-            title: "Food Recipes",
-            image: recipe,
-            description: "Start typing your favourite dish, this app will show you all the varities with recipe description and youtube video if exists.",
-            gitlink: "https://github.com/abdulkaleem254/portfolio",
-            liveUrl: "https://food-recipe-making.netlify.app/",
-            technologies: ["React.js", "Tailwind CSS", "REST Api", "Material UI"],
-            stack: "frontend"
-        },
-        {
-            title: "Elegant Context",
-            image: elegant,
-            description: "Elegant Clothing For Everyone.",
-            gitlink: "https://github.com/abdulkaleem254/shopping",
-            liveUrl: "https://shopping-in-elegant.netlify.app/",
-            technologies: ["React.js", "Tailwind CSS"],
-            stack: "frontend"
-        },
-        {
-            title: "Tuk-Tuk Cambodia",
-            image: tuktuk,
-            description: "Your ultimate guide to selecting the best tuk-tuk experiences in Cambodia — trusted drivers, local insights, and unforgettable journeys.",
-            gitlink: "https://github.com/abdulkaleem254/tuk-tuk",
-            liveUrl: "https://cambodia-tuk-tuk.netlify.app/",
-            technologies: ["React.js", "Tailwind CSS"],
-            stack: "frontend"
         }
-    ]
+        else {
+
+            setProjects(projects);
+        }
+
+    }
+
+
     return (
         <>
             <section className="pt-15 px-5 bg-gray-950 text-white" id='projects'>
@@ -104,13 +42,12 @@ const Projects = () => {
                 <h4 className="text-center mb-10 text-gray-400">Here are some of my recent projects. Each project reflects my skills and experience in different areas of web development.</h4>
                 <div className="projects">
                     <div className="selectors flex flex-wrap justify-center gap-2 md:gap-5">
-                        <button className="px-5 py-2 border rounded-full bg-gray-800">All</button>
-                        <button className="px-5 py-2 border rounded-full bg-gray-800">Frontend</button>
-                        <button className="px-5 py-2 border rounded-full bg-gray-800">Backend</button>
-                        <button className="px-5 py-2 border rounded-full bg-gray-800">Fullstack</button>
+                        {techStacks_btns.map((label, index) => {
+                            return <button key={`${label}+${index}`} className={label == selection ? "px-5 py-2 border rounded-full bg-blue-800" : "px-5 py-2 border rounded-full bg-gray-800"} onClick={() => { handleSelect(index) }}>{label}</button>
+                        })}
                     </div>
                     <div className="result flex-wrap w-[98%] mx-auto gap-5 md:flex justify-center px-2 my-3 items-center py-5">
-                        {projects.map((project, index) => {
+                        {Projects && Projects.map((project, index) => {
                             return (
                                 <div className="container relative  md:w-[30%] h-[450px] my-5 md:my-0 border border-gray-600 rounded p-3">
                                     <div className="image-space">

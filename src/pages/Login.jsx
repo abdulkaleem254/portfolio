@@ -5,6 +5,7 @@ import { auth } from "../firebase/firebaseConfig.js";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../store/AuthContext.jsx";
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 
 const Login = () => {
@@ -51,8 +52,9 @@ const Login = () => {
                                     <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
                                 </div>
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 relative">
                                 <input {...register('password', { required: true })} type="password" name="password" id="password" autoComplete="current-password" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                <RemoveRedEyeIcon className="absolute right-1.5 top-1.5 text-gray-800"/>
                             </div>
                         </div>
 

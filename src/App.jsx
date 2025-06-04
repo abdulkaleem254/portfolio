@@ -13,6 +13,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './store/AuthContext'
+import { ProjectsProvider } from './store/ProjectsContext'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,29 +31,31 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <Router>
-          <Routes>
-            <Route path='/' element={
-              <div className='bg-gray-950'>
-                <Navbar />
-                <Banner />
-                <About />
-                <Skills />
-                <Experience />
-                <Projects />
-                <Contact />
-                <Footer />
-              </div>
-            } />
-            <Route path='login' element={<Login />} />
-            <Route path='dashboard' element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>} />
-          </Routes>
-        </Router>
-      </AuthProvider>
+      <ProjectsProvider>
+        <AuthProvider>
+          <Router>
+            <Routes>
+              <Route path='/' element={
+                <div className='bg-gray-950'>
+                  <Navbar />
+                  <Banner />
+                  <About />
+                  <Skills />
+                  <Experience />
+                  <Projects />
+                  <Contact />
+                  <Footer />
+                </div>
+              } />
+              <Route path='login' element={<Login />} />
+              <Route path='dashboard' element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>} />
+            </Routes>
+          </Router>
+        </AuthProvider>
+      </ProjectsProvider>
 
     </>
   )
