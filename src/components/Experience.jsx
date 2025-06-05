@@ -8,7 +8,8 @@ const Experience = () => {
                 title: "Analyst",
                 place: "Deloitte USI",
                 date: "2023 - Present",
-                description: "Working on enterprise-grade web solutions using Adobe Experience Manager (AEM) for content management and delivery. Developed Process enhancement projects with Node.js and integrated APIs across digital platforms."
+                description: "Working on enterprise-grade web solutions using Adobe Experience Manager (AEM) for content management and delivery. Developed Process enhancement projects with Node.js and integrated APIs across digital platforms.",
+                awards:["Spot Award", "Applause Award"]
             },
             {
                 title: "Programmer Analyst",

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
@@ -14,9 +14,11 @@ import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './store/AuthContext'
 import { ProjectsProvider } from './store/ProjectsContext'
+import { ThemeContext, ThemeProvider } from './store/ThemeContext'
 
 function App() {
   const [count, setCount] = useState(0);
+  const { theme } = useContext(ThemeContext);
 
   const cursor = document.createElement("div");
   cursor.classList.add("cursor-dot");
@@ -28,7 +30,6 @@ function App() {
     cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
   });
 
-
   return (
     <>
       <ProjectsProvider>
@@ -36,7 +37,7 @@ function App() {
           <Router>
             <Routes>
               <Route path='/' element={
-                <div className='bg-gray-950'>
+                <div className={`${theme} bg-gray-950`}>
                   <Navbar />
                   <Banner />
                   <About />
@@ -56,7 +57,6 @@ function App() {
           </Router>
         </AuthProvider>
       </ProjectsProvider>
-
     </>
   )
 }

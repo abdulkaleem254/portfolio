@@ -3,13 +3,15 @@ import logo from "../assets/logo.png"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebaseConfig.js";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../store/AuthContext.jsx";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
 
 const Login = () => {
     const { user } = useContext(AuthContext);
+    const [type, setType] = useState("password");
     if (user) {
         return <Navigate to='/dashboard' />
     }
@@ -25,7 +27,20 @@ const Login = () => {
         }
         catch (err) {
             console.log(err.code, err.message)
-        }   
+        }
+    }
+
+    let show;
+    const handleChange = () => {
+        if (type == "password") {
+            setType("text");
+            show = `<VisibilityOffOutlinedIcon/>`
+        }
+        else {
+            setType("password");
+            show = `<RemoveRedEyeIcon/>`
+        }
+
     }
 
     return (
@@ -49,12 +64,12 @@ const Login = () => {
                             <div className="flex items-center justify-between">
                                 <label htmlFor="password" className="block text-sm/6 font-medium text-gray-200">Password</label>
                                 <div className="text-sm">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                                    <a href="#" className="font-semibold text-indigo-100 hover:text-indigo-500">Forgot password?</a>
                                 </div>
                             </div>
                             <div className="mt-2 relative">
-                                <input {...register('password', { required: true })} type="password" name="password" id="password" autoComplete="current-password" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
-                                <RemoveRedEyeIcon className="absolute right-1.5 top-1.5 text-gray-800"/>
+                                <input {...register('password', { required: true })} type={type} name="password" id="password" autoComplete="current-password" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                <span className="cursor-pointer absolute right-1.5 top-1 text-gray-800" onClick={handleChange} >{type != "password" ? <RemoveRedEyeIcon /> : <VisibilityOffOutlinedIcon />}</span>
                             </div>
                         </div>
 
