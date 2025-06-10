@@ -20,12 +20,12 @@ export default function ModalOverlay({ ...props }) {
             />
 
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div className="flex h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
                     <DialogPanel
                         transition
                         className="relative transform overflow-hidden rounded-lg bg-white text-center shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
                     >
-                        <div className="bg-white pt-5 pb-4 sm:p-6 sm:pb-4 h-[250px] md:h-[100%]">
+                        <div className="bg-white pt-5 pb-4 sm:p-6 sm:pb-4  md:h-[100%]">
                             <div className="sm:flex sm:items-start">
                                 {/* <div className="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10">
                                     <ExclamationTriangleIcon aria-hidden="true" className="size-6 text-red-600" />
