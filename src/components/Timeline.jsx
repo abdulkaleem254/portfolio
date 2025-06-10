@@ -5,6 +5,7 @@ import ModalOverlay from './ModalOverlay';
 import logo from "../assets/logo.png"
 import spot from "../assets/spot-award.jpg"
 import applause from "../assets/applause-award.jpg"
+// import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 
 const Timeline = ({ timeline, title }) => {
     const [show, setShow] = useState(false);
@@ -24,7 +25,7 @@ const Timeline = ({ timeline, title }) => {
         <>
             <div className="md:w-1/2 relative ml-4">
                 <div className="mb-5 flex items-center gap-3">
-                    <WorkOutlineOutlinedIcon className='font-bold' />
+                    {title!="Education"?<WorkOutlineOutlinedIcon className='font-bold' />:<SchoolOutlinedIcon/>}
                     <h2 className="text-2xl font-semibold">{title}</h2>
                 </div>
                 {/* Timeline vertical line */}
