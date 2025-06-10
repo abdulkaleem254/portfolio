@@ -7,6 +7,7 @@ import logo from "../assets/logo.png"
 
 const Dashboard = () => {
     const [data, setData] = useState();
+    const [loading, setLoading] = useState(true);
     const handleLogOut = async () => {
         try {
             await signOut(auth);
@@ -30,6 +31,7 @@ const Dashboard = () => {
                 }));
                 setData(data)
                 console.log(data);
+                setLoading(false);
             } catch (error) {
                 console.error("Error fetching users:", error.message);
             }
@@ -49,7 +51,8 @@ const Dashboard = () => {
 
             <div className="px-10 mx-auto pt-25">
                 <h2 className="font-semibold text-xl">Contact Form Submissions</h2>
-                <ul>
+                {loading && <p className="flex h-full items-center font-semibold">Loading...</p>}
+                {!loading && <ul>
                     {data && data.map((msg) => (
                         <li key={msg.id} className="my-2 py-1">
                             <strong>Name: </strong>{msg.name}<br />
@@ -60,7 +63,7 @@ const Dashboard = () => {
                             <hr className="mt-2" />
                         </li>
                     ))}
-                </ul>
+                </ul>}
             </div>
 
 

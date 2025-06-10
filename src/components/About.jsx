@@ -21,12 +21,12 @@ const About = () => {
                     <div className="w-[95%] mx-auto md:w-1/2 mt-10 md:mt-0">
                         <h2 className="text-3xl font-bold mb-5 tracking-wide">Full Stack Developer</h2>
                         <p className="text-gray-600 dark:text-gray-400 mb-6">I'm a dedicated MERN Stack Developer with a strong grasp of MongoDB, Express.js, React, and Node.js.
-                            As a fresher, I've worked on several personal and academic projects that demonstrate my
+                            I'm having more than 3 years of experience, I've worked on several personal and academic projects that demonstrate my
                             ability to build full-stack web applications with clean architecture and responsive design.
                             I'm enthusiastic about writing efficient code, learning new technologies, and contributing to dynamic development teams.
 
                         </p>
-                        <p className="text-gray-600 dark:text-gray-400 mb-6">My journey in web development began during my Computer Science studies, where I developed a strong foundation in full-stack development using the MERN stack. Through personal projects and continuous learning, I've built hands-on experience in developing user-friendly and scalable web applications. I'm
+                        <p className="text-gray-600 dark:text-gray-400 mb-6">My journey in web development began during my graduation, where I developed a strong foundation in full-stack development using the MERN stack. Through personal projects and continuous learning, I've built hands-on experience in developing user-friendly and scalable web applications. I'm
                             passionate about staying updated with the latest technologies and best practices to grow as a modern web developer.</p>
                         <div className="block md:flex justify-between items-center">
                             <div>

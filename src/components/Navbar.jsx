@@ -42,7 +42,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-1 items-center flex-row-reverse md:flex-row justify-end md:justify-between">
                         <div className="flex shrink-0 items-center">
-                            <img className="h-30 -ml-5 md:ml-0 w-auto cursor-pointer" src={logo} alt="Your Company" />
+                            <a href=""><img className="h-30 -ml-5 md:ml-0 w-auto cursor-pointer" src={logo} alt="Your Company" /></a>
                             {/* <h3>Kaleem Portfolio</h3> */}
                         </div>
                         <div className="hidden sm:ml-6 sm:block">

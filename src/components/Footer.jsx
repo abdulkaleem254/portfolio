@@ -14,10 +14,10 @@ const Footer = () => {
 
                     </div>
                     <div className='flex gap-3 mt-5 justify-center md:justify-start'>
-                        <a href=""> <GitHubIcon /> </a>
-                        <a href=""> <LinkedInIcon /> </a>
-                        <a href="">  <XIcon /> </a>
-                        <a href=""><EmailIcon /></a>
+                        <a href="https://github.com/abdulkaleem254" target='_Blank'> <GitHubIcon /> </a>
+                        <a href="https://www.linkedin.com/in/kaleem254/" target='_Blank'> <LinkedInIcon /> </a>
+                        <a href="https://x.com/AbdulKa77484771" target='_blank'>  <XIcon /> </a>
+                        <a href="mailto:abdulkaleem254@gmail.com"><EmailIcon /></a>
                     </div>
                 </div>
                 <div className="container text-center py-5 md:py-1">

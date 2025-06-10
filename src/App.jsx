@@ -10,12 +10,13 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
+// import Dashboard from './pages/Dashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './store/AuthContext'
 import { ProjectsProvider } from './store/ProjectsContext'
 import { ThemeContext, ThemeProvider } from './store/ThemeContext'
-
+import { lazy, Suspense } from 'react'
+const Dashboard = lazy(() => { return import('./pages/Dashboard') });
 function App() {
   const [count, setCount] = useState(0);
   const { theme } = useContext(ThemeContext);
@@ -51,7 +52,9 @@ function App() {
               <Route path='login' element={<Login />} />
               <Route path='dashboard' element={
                 <ProtectedRoute>
-                  <Dashboard />
+                  <Suspense fallback="Loading...">
+                    <Dashboard />
+                  </Suspense>
                 </ProtectedRoute>} />
             </Routes>
           </Router>

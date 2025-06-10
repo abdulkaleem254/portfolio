@@ -17,6 +17,10 @@ const Skills = () => {
                 logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
             },
             {
+                name:"Bootstrap",
+                logo:"https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow@2x.png"
+            },
+            {
                 name: "JavaScript",
                 logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
             },
@@ -77,13 +81,7 @@ const Skills = () => {
 
                 {skills.map((tech, index) => {
                     return (
-                        <>
-
-                            <Skillbox tech={tech} />
-
-
-
-                        </>
+                        <Skillbox tech={tech} />
                     )
                 })}
             </div>
