@@ -16,6 +16,7 @@ import { AuthProvider } from './store/AuthContext'
 import { ProjectsProvider } from './store/ProjectsContext'
 import { ThemeContext, ThemeProvider } from './store/ThemeContext'
 import { lazy, Suspense } from 'react'
+import InAppBrowserBanner from './components/InAppBrowseBanner'
 const Dashboard = lazy(() => { return import('./pages/Dashboard') });
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <InAppBrowserBanner />
       <ProjectsProvider>
         <AuthProvider>
           <Router>
