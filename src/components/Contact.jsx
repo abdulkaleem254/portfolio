@@ -39,15 +39,15 @@ const Contact = () => {
                 <h2 className="text-3xl text-center font-bold text-gray-200 tracking-wide">Get in Touch</h2>
                 <div className="w-20 border-blue-600 border-b-4 mx-auto mt-2"></div>
                 <p className="text-gray-500 text-sm md:w-[60%] mx-auto text-center my-5">Feel free to contact me for any work or suggestions. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                <div className="grid lg:grid-cols-3 gap-8 mt-10">
-                    <div className="lg:col-span-1" style={{ opacity: 1 }}>
-                        <div className="bg-white dark:bg-gray-900 p-2 md:p-8 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full">
+                <div className="grid lg:grid-cols-3 gap-8 mt-10 ">
+                    <div className="lg:col-span-1 " style={{ opacity: 1 }}>
+                        <div className=" bg-gray-900 p-2 md:p-8 rounded-lg shadow-sm border border-gray-200 border-gray-700 h-full">
                             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
                                 Contact Information
                             </h3>
-                            <div className="space-y-6">
+                            <div className="space-y-6 ">
                                 <div className="flex items-start">
-                                    <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mr-4">
+                                    <div className="bg-blue-100 bg-blue-900/30 p-3 rounded-lg mr-4">
                                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
                                             className="w-10 h-10 text-gray-100" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                             <path fill="none" d="M0 0h24v24H0z">
@@ -66,7 +66,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mr-4">
+                                    <div className="bg-blue-100 bg-blue-900/30 p-3 rounded-lg mr-4">
                                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24"
                                             className="w-10 h-10 text-gray-100" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                             <path fill="none" d="M0 0h24v24H0z">

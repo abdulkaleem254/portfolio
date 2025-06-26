@@ -6,7 +6,7 @@ import resume from "../assets/Kaleem_Frontend_Resume.pdf"
 const About = () => {
     return (
         <>
-            <section id="about" className="py-15 bg-gray-600 dark:bg-gray-800">
+            <section id="about" className="py-15 bg-gray-600 bg-gray-800">
                 <h2 className="text-3xl text-center "><span className="font-bold text-gray-200 tracking-wide">About Me</span></h2>
                 <div className="w-20 border-blue-600 border-b-3 mx-auto mt-1"></div>
                 <div className="container w-[90%] my-10 mx-auto block md:flex justify-around text-center">

@@ -40,7 +40,7 @@ const Banner = () => {
     return (
         <>
             <section className={`${theme}`}>
-                <div id="home" className="mt-15 flex flex-col md:flex-row-reverse items-center  relative banner bg-gray-300 dark:bg-gray-950 text-white">
+                <div id="home" className="mt-15 flex flex-col md:flex-row-reverse items-center  relative banner bg-gray-300 bg-gray-950 text-white">
                     <div className="w-full md:w-[70%] p-4 md:px-10 flex justify-center items-center order-2 md:order-1">
                         <div className="container text-center md:text-start mt-5 md:mt-1 md:mt-0">
                             <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/5 border border-gray-800/90 backdrop-blur-sm mb-6"><div className="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></div><span className="text-xs font-medium gradient-text bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-blue-400">Available for new projects</span></div>
@@ -96,14 +96,14 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className="absolute right-2 md:right-4 top-70 md:top-40 flex flex-col gap-4 items-end">
-                        <a href="https://github.com/abdulkaleem254" target="_Blank" className="group dark:bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
+                        <a href="https://github.com/abdulkaleem254" target="_Blank" className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
                             <GitHubIcon className="mr-2.5 text-xl" />
                             <span className="mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 Github
                             </span>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/kaleem254/" target="_blank" className="group dark:bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
+                        <a href="https://www.linkedin.com/in/kaleem254/" target="_blank" className="group bg-gray-800 rounded-full h-[45px]  cursor-pointer text-gray-300 hover:text-gray-100 transition-all duration-300 w-[45px] hover:w-[120px] overflow-hidden flex flex-row-reverse items-center">
                             <LinkedInIcon className="mr-2.5 text-xl" />
                             <span className="mr-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 LinkedIn
